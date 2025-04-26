@@ -13,7 +13,7 @@ public interface ProductService {
 
      List<Product> getAllProduct();
 
-     Product getProductByUUID(UUID id);
+     Product getProductByUUID(String id);
 
      Product getProductBySKU(String sku);
 

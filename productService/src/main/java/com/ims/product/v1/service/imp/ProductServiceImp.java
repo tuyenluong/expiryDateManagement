@@ -4,21 +4,21 @@ import com.ims.product.v1.entity.Product;
 import com.ims.product.v1.exception.ResourceNotFoundException;
 import com.ims.product.v1.repository.ProductRepository;
 import com.ims.product.v1.service.ProductService;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
 @Service
+@AllArgsConstructor
 public class ProductServiceImp implements ProductService {
 
     private ProductRepository productRepository;
 
-    public ProductServiceImp(ProductRepository productRepository){
-        this.productRepository = productRepository;
-    }
     @Override
     public Product createProduct(Product product) {
+        product.setUuid(UUID.randomUUID());
         return productRepository.save(product);
     }
 
@@ -28,9 +28,9 @@ public class ProductServiceImp implements ProductService {
     }
 
     @Override
-    public Product getProductByUUID(UUID id) {
-        return productRepository.findByUUID(id).orElseThrow(
-                () -> new ResourceNotFoundException("Not found resource with current UUID: "+ id.toString()));
+    public Product getProductByUUID(String id) {
+        return productRepository.findByUuid(UUID.fromString(id)).orElseThrow(
+                () -> new ResourceNotFoundException("Not found resource with current UUID: "+ id));
     }
 
     @Override
