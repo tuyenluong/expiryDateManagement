@@ -1,21 +1,28 @@
 package com.ims.product.v1.service;
 
+import com.ims.product.v1.dto.response.DeletedDto;
 import com.ims.product.v1.entity.Product;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public interface ProductService {
 
-     Product createProduct(Product product);
+    Product createProduct(Product product);
 
-     List<Product> getAllProduct();
+    List<Product> getAllProduct();
 
-     Product getProductByUUID(String id);
+    int updateProductExpiryDateBSku(String sku, String localDate);
 
-     Product getProductBySKU(String sku);
+    int updateProductProductionDateBSku(String sku, String localDate);
+
+    int deleteProductBySku(String sku);
+
+    Product getProductByUUID(String id);
+
+    Product getProductBySKU(String sku);
 
 
 }

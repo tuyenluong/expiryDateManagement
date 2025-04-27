@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import java.time.LocalDateTime;
 
 
-
 @Data
 @Schema(
         name = "ErrorResponse",
@@ -25,7 +24,7 @@ public class ErrorDto {
     @Schema(
             description = "API path invoked by client"
     )
-    private  String apiPath;
+    private String apiPath;
 
     @Schema(
             description = "Error code representing the error happened"
@@ -35,7 +34,7 @@ public class ErrorDto {
     @Schema(
             description = "Error message representing the error happened"
     )
-    private  String errorMessage;
+    private String errorMessage;
 
     @Schema(
             description = "Time representing when the error happened"
