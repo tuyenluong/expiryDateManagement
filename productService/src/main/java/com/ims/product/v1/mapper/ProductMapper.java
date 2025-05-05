@@ -56,7 +56,7 @@ public class ProductMapper {
         if(affectedRows.equals(1)){
             updateExpiryDateDto.setMessage("Update SKU Expiry date successfully: " + sku);
         }else{
-            updateExpiryDateDto.setMessage("Technical error when delete SKU: " + sku);
+            updateExpiryDateDto.setMessage("Technical error when update ExpiryDate with SKU: " + sku);
         }
         return updateExpiryDateDto;
     }
@@ -70,7 +70,7 @@ public class ProductMapper {
         if(affectedRows.equals(1)){
             updateProductionDto.setMessage("Update SKU Production date successfully: " + sku);
         }else{
-            updateProductionDto.setMessage("Technical error when delete SKU: " + sku);
+            updateProductionDto.setMessage("Technical error when update ProductionDate with SKU: " + sku);
         }
         return updateProductionDto;
     }
