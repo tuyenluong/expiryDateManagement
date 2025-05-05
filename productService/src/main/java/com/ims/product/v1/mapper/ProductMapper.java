@@ -1,10 +1,14 @@
 package com.ims.product.v1.mapper;
 
-import com.ims.product.v1.dto.ProductDto;
+import com.ims.product.v1.dto.request.ProductDto;
 import com.ims.product.v1.dto.response.DeletedDto;
 import com.ims.product.v1.dto.response.UpdateExpiryDateDto;
 import com.ims.product.v1.dto.response.UpdateProductionDto;
 import com.ims.product.v1.entity.Product;
+import com.ims.product.v1.constant.DateFormatCons;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class ProductMapper {
 
@@ -12,8 +16,10 @@ public class ProductMapper {
         ProductDto productDto = new ProductDto();
         productDto.setSku(product.getSku());
         productDto.setName(product.getName());
-        productDto.setExpiryDate(product.getExpiryDate());
-        productDto.setProductionDate(product.getProductionDate());
+        String getExpiryDate = product.getExpiryDate().toString();
+        productDto.setExpiryDate(getExpiryDate);
+        String getProductionDate = product.getProductionDate().toString();
+        productDto.setProductionDate(getProductionDate);
         return productDto;
     }
 
@@ -21,8 +27,10 @@ public class ProductMapper {
         Product product = new Product();
         product.setSku(productDto.getSku());
         product.setName(productDto.getName());
-        product.setExpiryDate(productDto.getExpiryDate());
-        product.setProductionDate(productDto.getProductionDate());
+        LocalDate getExpiryDate = LocalDate.parse(productDto.getExpiryDate(), DateTimeFormatter.ofPattern(DateFormatCons.YYYY_MM_DD_HYPHEN));
+        product.setExpiryDate(getExpiryDate);
+        LocalDate getProductionDate = LocalDate.parse(productDto.getProductionDate(), DateTimeFormatter.ofPattern(DateFormatCons.YYYY_MM_DD_HYPHEN));
+        product.setProductionDate(getProductionDate);
         return product;
     }
 

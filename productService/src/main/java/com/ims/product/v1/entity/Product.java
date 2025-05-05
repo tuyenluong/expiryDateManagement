@@ -1,36 +1,41 @@
 package com.ims.product.v1.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.ims.product.v1.annotation.NotMissing;
+import com.ims.product.v1.constant.DateFormatCons;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.util.UUID;
 
 @Entity
 @Table(name = "products")
-@Setter
-@Getter
+@Data
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Column(name = "product_id")
-    private UUID uuid;
-
     @Column(length = 50)
+    @NotMissing
     private String sku;
 
     @Column(nullable = false, length = 100)
+    @NotMissing
     private String name;
 
     @Column(name = "expiry_date")
+    @NotMissing
+    @Future(message = "EXPIRY_DATE must not in the present or the past")
+    @JsonFormat(pattern = DateFormatCons.YYYY_MM_DD_HYPHEN)
     private LocalDate expiryDate;
 
     @Column(name = "production_date")
+    @NotMissing
+    @PastOrPresent(message = "PRODUCTION_DATE must not in the future")
+    @JsonFormat(pattern = DateFormatCons.YYYY_MM_DD_HYPHEN)
     private LocalDate productionDate;
 }
 
