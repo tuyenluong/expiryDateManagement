@@ -1,9 +1,9 @@
 package com.ims.product.v1.controller;
 
 import com.ims.product.v1.dto.request.ProductDto;
+import com.ims.product.v1.dto.request.UpdateRequestDto;
 import com.ims.product.v1.dto.response.DeletedDto;
-import com.ims.product.v1.dto.response.UpdateExpiryDateDto;
-import com.ims.product.v1.dto.response.UpdateProductionDto;
+import com.ims.product.v1.dto.response.UpdateResponseDto;
 import com.ims.product.v1.entity.Product;
 import com.ims.product.v1.mapper.ProductMapper;
 import com.ims.product.v1.service.ProductService;
@@ -42,20 +42,13 @@ public class ProductController {
         return ResponseEntity.status(HttpStatus.OK).body(productDto);
     }
 
-    @PatchMapping("/product/{sku}/updateExpiryDate/{expiryDate}")
-    public ResponseEntity<UpdateExpiryDateDto> updateExpiryDate(@PathVariable(name = "sku") String sku,
-                                                                @PathVariable(name = "expiryDate")String date) {
-        Integer affectedRows = productService.updateProductExpiryDateBSku(sku,date);
-        UpdateExpiryDateDto updateExpiryDateDto = ProductMapper.productToUpdateExpiryDateDto(productService.getProductBySKU(sku), affectedRows);
-        return ResponseEntity.status(HttpStatus.OK).body(updateExpiryDateDto);
-    }
+    @PatchMapping("/product/updateDate/{sku}")
+    public ResponseEntity<UpdateResponseDto> updateDate(@PathVariable(name = "sku") String sku,
+                                                        @RequestBody @Valid UpdateRequestDto updateRequestDto) {
 
-    @PatchMapping("/product/{sku}/updateProductionDate/{productionDate}")
-    public ResponseEntity<UpdateProductionDto> updateProductionDate(@PathVariable(name = "sku") String sku,
-                                                           @PathVariable(name = "productionDate")String date) {
-        Integer affectedRows = productService.updateProductProductionDateBSku(sku,date);
-        UpdateProductionDto updateProductionDto = ProductMapper.productToUpdateProductionDto(productService.getProductBySKU(sku), affectedRows);
-        return ResponseEntity.status(HttpStatus.OK).body(updateProductionDto);
+        Integer affectedRows = productService.updateDateBySku(sku,updateRequestDto);
+        UpdateResponseDto updateResponseDto = ProductMapper.productToUpdateResponseDto(productService.getProductBySKU(sku), affectedRows);
+        return ResponseEntity.status(HttpStatus.OK).body(updateResponseDto);
     }
 
     @DeleteMapping("/product/delete/{sku}")

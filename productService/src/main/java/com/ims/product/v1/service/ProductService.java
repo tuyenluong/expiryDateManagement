@@ -1,5 +1,6 @@
 package com.ims.product.v1.service;
 
+import com.ims.product.v1.dto.request.UpdateRequestDto;
 import com.ims.product.v1.entity.Product;
 import org.springframework.stereotype.Service;
 
@@ -12,9 +13,7 @@ public interface ProductService {
 
     List<Product> getAllProduct();
 
-    int updateProductExpiryDateBSku(String sku, String localDate);
-
-    int updateProductProductionDateBSku(String sku, String localDate);
+    int updateDateBySku(String sku, UpdateRequestDto updateRequestDto);
 
     int deleteProductBySku(String sku);
 

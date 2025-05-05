@@ -8,6 +8,10 @@ import java.time.format.ResolverStyle;
 public class DateManagement {
 
     public static boolean validateDateFormat(String date, String pattern){
+        if (date == null || date.trim().isEmpty()) {
+            // Allow nulls and blanks; use @NotMissing to enforce presence
+            return true;
+        }
         try {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
             formatter.withResolverStyle(ResolverStyle.STRICT);

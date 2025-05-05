@@ -31,4 +31,9 @@ public interface ProductRepository extends JpaRepository<Product, String> {
     @Modifying(clearAutomatically = true)
     @Query("UPDATE Product p SET p.productionDate = :productionDate WHERE p.sku = :sku")
     int updateProductionDateBySku(@Param("productionDate")LocalDate productionDate, @Param("sku")String sku);
+
+    @Transactional
+    @Modifying(clearAutomatically = true)
+    @Query("UPDATE Product p SET p.productionDate = :productionDate, p.expiryDate = :expiryDate WHERE p.sku = :sku")
+    int updateDateBySku(@Param("expiryDate")LocalDate expiryDate, @Param("productionDate")LocalDate productionDate, @Param("sku")String sku);
 }

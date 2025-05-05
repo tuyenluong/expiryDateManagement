@@ -17,10 +17,8 @@ public class ProductDto {
     private String name;
 
     @DateFormat(pattern = DateFormatCons.YYYY_MM_DD_HYPHEN)
-    @NotMissing(message = "EXPIRY_DATE must not be NULL, EMPTY or BLANK")
     private String expiryDate;
 
     @DateFormat(pattern = DateFormatCons.YYYY_MM_DD_HYPHEN)
-    @NotMissing(message = "PRODUCTION_DATE must not be NULL, EMPTY or BLANK")
     private String productionDate;
 }

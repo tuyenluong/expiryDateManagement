@@ -2,8 +2,7 @@ package com.ims.product.v1.mapper;
 
 import com.ims.product.v1.dto.request.ProductDto;
 import com.ims.product.v1.dto.response.DeletedDto;
-import com.ims.product.v1.dto.response.UpdateExpiryDateDto;
-import com.ims.product.v1.dto.response.UpdateProductionDto;
+import com.ims.product.v1.dto.response.UpdateResponseDto;
 import com.ims.product.v1.entity.Product;
 import com.ims.product.v1.constant.DateFormatCons;
 
@@ -27,10 +26,14 @@ public class ProductMapper {
         Product product = new Product();
         product.setSku(productDto.getSku());
         product.setName(productDto.getName());
-        LocalDate getExpiryDate = LocalDate.parse(productDto.getExpiryDate(), DateTimeFormatter.ofPattern(DateFormatCons.YYYY_MM_DD_HYPHEN));
-        product.setExpiryDate(getExpiryDate);
-        LocalDate getProductionDate = LocalDate.parse(productDto.getProductionDate(), DateTimeFormatter.ofPattern(DateFormatCons.YYYY_MM_DD_HYPHEN));
-        product.setProductionDate(getProductionDate);
+        if(productDto.getExpiryDate() != null){
+            LocalDate getExpiryDate = LocalDate.parse(productDto.getExpiryDate(), DateTimeFormatter.ofPattern(DateFormatCons.YYYY_MM_DD_HYPHEN));
+            product.setExpiryDate(getExpiryDate);
+        }
+        if(productDto.getProductionDate() != null){
+            LocalDate getProductionDate = LocalDate.parse(productDto.getProductionDate(), DateTimeFormatter.ofPattern(DateFormatCons.YYYY_MM_DD_HYPHEN));
+            product.setProductionDate(getProductionDate);
+        }
         return product;
     }
 
@@ -47,31 +50,17 @@ public class ProductMapper {
         return deletedDto;
     }
 
-    public static UpdateExpiryDateDto productToUpdateExpiryDateDto(Product product, Integer affectedRows){
-        UpdateExpiryDateDto updateExpiryDateDto = new UpdateExpiryDateDto();
+    public static UpdateResponseDto productToUpdateResponseDto(Product product, Integer affectedRows){
+        UpdateResponseDto updateResponseDto = new UpdateResponseDto();
         String sku = product.getSku();
-        updateExpiryDateDto.setSku(sku);
-        updateExpiryDateDto.setName(product.getName());
-        updateExpiryDateDto.setExpiryDate(product.getExpiryDate());
+        updateResponseDto.setSku(sku);
         if(affectedRows.equals(1)){
-            updateExpiryDateDto.setMessage("Update SKU Expiry date successfully: " + sku);
+            updateResponseDto.setExpiryDate(String.valueOf(product.getExpiryDate()));
+            updateResponseDto.setProductionDate(String.valueOf(product.getProductionDate()));
+            updateResponseDto.setMessage("Update SKU Expiry date successfully: " + sku);
         }else{
-            updateExpiryDateDto.setMessage("Technical error when update ExpiryDate with SKU: " + sku);
+            updateResponseDto.setMessage("Technical error when update Date with SKU: " + sku);
         }
-        return updateExpiryDateDto;
-    }
-
-    public static UpdateProductionDto productToUpdateProductionDto(Product product, Integer affectedRows){
-        UpdateProductionDto updateProductionDto = new UpdateProductionDto();
-        String sku = product.getSku();
-        updateProductionDto.setSku(sku);
-        updateProductionDto.setName(product.getName());
-        updateProductionDto.setProductionDate(product.getProductionDate());
-        if(affectedRows.equals(1)){
-            updateProductionDto.setMessage("Update SKU Production date successfully: " + sku);
-        }else{
-            updateProductionDto.setMessage("Technical error when update ProductionDate with SKU: " + sku);
-        }
-        return updateProductionDto;
+        return updateResponseDto;
     }
 }

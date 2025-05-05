@@ -27,13 +27,11 @@ public class Product implements Serializable {
     private String name;
 
     @Column(name = "expiry_date")
-    @NotMissing
     @Future(message = "EXPIRY_DATE must not in the present or the past")
     @JsonFormat(pattern = DateFormatCons.YYYY_MM_DD_HYPHEN)
     private LocalDate expiryDate;
 
     @Column(name = "production_date")
-    @NotMissing
     @PastOrPresent(message = "PRODUCTION_DATE must not in the future")
     @JsonFormat(pattern = DateFormatCons.YYYY_MM_DD_HYPHEN)
     private LocalDate productionDate;
