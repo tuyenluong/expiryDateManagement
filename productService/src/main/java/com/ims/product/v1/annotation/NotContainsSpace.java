@@ -1,5 +1,6 @@
 package com.ims.product.v1.annotation;
 
+import com.ims.product.v1.validator.NotContainsSpaceValidator;
 import com.ims.product.v1.validator.NotMissingValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
@@ -12,8 +13,8 @@ import static java.lang.annotation.ElementType.FIELD;
 
 @Target(FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = NotMissingValidator.class)
-public @interface NotContainsBlank {
+@Constraint(validatedBy = NotContainsSpaceValidator.class)
+public @interface NotContainsSpace {
 
     String message() default "Field must not contains BLANK spaces";
 
