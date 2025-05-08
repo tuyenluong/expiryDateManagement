@@ -1,6 +1,7 @@
 package com.ims.product.v1.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.ims.product.v1.annotation.NotContainsBlank;
 import com.ims.product.v1.annotation.NotMissing;
 import com.ims.product.v1.constant.DateFormatCons;
 import jakarta.persistence.*;

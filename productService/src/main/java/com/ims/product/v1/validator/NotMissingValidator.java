@@ -12,7 +12,7 @@ public class NotMissingValidator implements ConstraintValidator<NotMissing, Obje
     public boolean isValid(Object value, ConstraintValidatorContext context) {
         return switch (value) {
             case null -> false;
-            case String stringVal -> !stringVal.trim().isEmpty();
+            case String stringVal -> !stringVal.trim().isEmpty() || !stringVal.trim().isBlank();
             case Collection<?> collectionVal -> !collectionVal.isEmpty();
             default -> true;
         };
