@@ -17,23 +17,23 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(path = "/api/v1/products", produces = {MediaType.APPLICATION_JSON_VALUE})
 @AllArgsConstructor
 public class ProductController {
 
     private ProductService productService;
-
-    @PostMapping("/createProduct")
-    public ResponseEntity<ProductDto> createProdct(@RequestBody @Valid ProductDto productDto) {
-        productService.createProduct(ProductMapper.productDtoToEntity(productDto));
-        return ResponseEntity.status(HttpStatus.OK).body(productDto);
-    }
 
     @GetMapping("/products")
     public ResponseEntity<List<ProductDto>> getProducts() {
         List<Product> products = productService.getAllProduct();
         List<ProductDto> productDtos = products.stream().map(ProductMapper::productToDto).toList();
         return ResponseEntity.status(HttpStatus.OK).body(productDtos);
+    }
+
+    @PostMapping("/createProduct")
+    public ResponseEntity<ProductDto> createProdct(@RequestBody @Valid ProductDto productDto) {
+        productService.createProduct(ProductMapper.productDtoToEntity(productDto));
+        return ResponseEntity.status(HttpStatus.OK).body(productDto);
     }
 
     @GetMapping("/products/sku/{sku}")
