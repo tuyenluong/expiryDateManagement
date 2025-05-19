@@ -8,11 +8,11 @@
 		<version>0.1.1</version>
 		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.product.service</groupId>
-	<artifactId>productService</artifactId>
+	<groupId>com.file.service</groupId>
+	<artifactId>fileService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>productService</name>
-	<description>Product service</description>
+	<name>fileService</name>
+	<description>File service</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -30,20 +30,14 @@
 		<java.version>21</java.version>
 	</properties>
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>5.2.3</version>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-starter-security</artifactId>-->
-<!--		</dependency>-->
+		<!--		<dependency>-->
+		<!--			<groupId>org.springframework.boot</groupId>-->
+		<!--			<artifactId>spring-boot-starter-security</artifactId>-->
+		<!--		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
