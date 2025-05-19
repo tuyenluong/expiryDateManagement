@@ -10,12 +10,13 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.Optional;
-import java.util.UUID;
 
 @Repository
 public interface ProductRepository extends JpaRepository<Product, String> {
 
     Optional<Product> findBySku(String sku);
+
+    boolean existsBySku(String sku);
 
     @Transactional
     @Modifying(clearAutomatically = true)

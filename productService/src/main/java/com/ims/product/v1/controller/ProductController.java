@@ -9,12 +9,14 @@ import com.ims.product.v1.mapper.ProductMapper;
 import com.ims.product.v1.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/v1/products", produces = {MediaType.APPLICATION_JSON_VALUE})
@@ -23,26 +25,29 @@ public class ProductController {
 
     private ProductService productService;
 
-    @GetMapping("/products")
-    public ResponseEntity<List<ProductDto>> getProducts() {
-        List<Product> products = productService.getAllProduct();
-        List<ProductDto> productDtos = products.stream().map(ProductMapper::productToDto).toList();
+    @GetMapping()
+    public ResponseEntity<Page<ProductDto>> getProducts(
+            @PageableDefault(size = 10, page = 0, sort = "name",
+                    direction = Sort.Direction.ASC)
+            Pageable pageable) {
+        Page<Product> products = productService.getAllProducts(pageable);
+        Page<ProductDto> productDtos = products.map(ProductMapper::productToDto);
         return ResponseEntity.status(HttpStatus.OK).body(productDtos);
     }
 
-    @PostMapping("/createProduct")
+    @PostMapping("/create")
     public ResponseEntity<ProductDto> createProdct(@RequestBody @Valid ProductDto productDto) {
         productService.createProduct(ProductMapper.productDtoToEntity(productDto));
         return ResponseEntity.status(HttpStatus.OK).body(productDto);
     }
 
-    @GetMapping("/products/sku/{sku}")
+    @GetMapping("/sku/{sku}")
     public ResponseEntity<ProductDto> getProductBySku(@PathVariable(name = "sku") String sku) {
         ProductDto productDto = ProductMapper.productToDto(productService.getProductBySKU(sku));
         return ResponseEntity.status(HttpStatus.OK).body(productDto);
     }
 
-    @PatchMapping("/product/updateDate/{sku}")
+    @PatchMapping("/updateDate/{sku}")
     public ResponseEntity<UpdateResponseDto> updateDate(@PathVariable(name = "sku") String sku,
                                                         @RequestBody @Valid UpdateRequestDto updateRequestDto) {
 
@@ -51,7 +56,7 @@ public class ProductController {
         return ResponseEntity.status(HttpStatus.OK).body(updateResponseDto);
     }
 
-    @DeleteMapping("/product/delete/{sku}")
+    @DeleteMapping("/delete/{sku}")
     public ResponseEntity<DeletedDto> deleteProduct(@PathVariable(name = "sku") String sku) {
         Product product = productService.getProductBySKU(sku);
         Integer affectedRows = productService.deleteProductBySku(sku);

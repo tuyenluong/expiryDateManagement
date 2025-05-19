@@ -7,10 +7,11 @@ import com.ims.product.v1.exception.ResourceNotFoundException;
 import com.ims.product.v1.repository.ProductRepository;
 import com.ims.product.v1.service.ProductService;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -20,20 +21,20 @@ public class ProductServiceImp implements ProductService {
 
     @Override
     public Product createProduct(Product product) {
-        if(productRepository.findBySku(product.getSku()).isPresent()){
+        if(productRepository.existsBySku(product.getSku())){
             throw new ResourceAlreadyExists("Resource already exists with SKU: " + product.getSku());
         }
         return productRepository.save(product);
     }
 
     @Override
-    public List<Product> getAllProduct() {
-        return productRepository.findAll();
+    public Page<Product> getAllProducts(Pageable pageable) {
+        return productRepository.findAll(pageable);
     }
 
     @Override
     public int updateDateBySku(String sku, UpdateRequestDto updateRequestDto) {
-        if(productRepository.findBySku(sku).isEmpty()){
+        if(productRepository.existsBySku(sku)){
             throw new ResourceNotFoundException("Not found resource with current SKU: " + sku);
         }
         if(updateRequestDto.getExpiryDate() != null && updateRequestDto.getProductionDate() != null){
@@ -54,7 +55,7 @@ public class ProductServiceImp implements ProductService {
 
     @Override
     public int deleteProductBySku(String sku) {
-        if(productRepository.findBySku(sku).isEmpty()){
+        if(productRepository.existsBySku(sku)){
             throw new ResourceNotFoundException("Not found resource with current SKU: " + sku);
         }
         return productRepository.deleteBySku(sku);

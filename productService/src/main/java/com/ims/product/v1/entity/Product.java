@@ -1,7 +1,6 @@
 package com.ims.product.v1.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.ims.product.v1.annotation.NotContainsBlank;
 import com.ims.product.v1.annotation.NotMissing;
 import com.ims.product.v1.constant.DateFormatCons;
 import jakarta.persistence.*;
@@ -19,7 +18,7 @@ public class Product implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @Column(length = 50)
+    @Column(name = "sku", length = 50)
     @NotMissing
     private String sku;
 
