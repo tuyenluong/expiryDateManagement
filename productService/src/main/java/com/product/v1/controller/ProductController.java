@@ -17,6 +17,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 @RestController
 @RequestMapping(path = "/api/v1/products", produces = {MediaType.APPLICATION_JSON_VALUE})
@@ -42,14 +45,14 @@ public class ProductController {
     }
 
     @PostMapping(value = "/import", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    public ResponseEntity<?> importProdcts() {
-        productService.importProducts();
+    public ResponseEntity<?> importProdcts(@RequestPart final MultipartFile file) throws IOException {
+        productService.importProducts(file);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
     @PostMapping(value = "/export", produces = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<?> exportProduct() {
-        productService.exportProducts();
+//        productService.exportProducts("");
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 

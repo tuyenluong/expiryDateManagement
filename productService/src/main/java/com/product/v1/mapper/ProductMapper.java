@@ -12,9 +12,7 @@ import java.time.format.DateTimeFormatter;
 public class ProductMapper {
 
     public static ProductDto productToDto(Product product) {
-        ProductDto productDto = new ProductDto();
-        productDto.setSku(product.getSku());
-        productDto.setName(product.getName());
+        ProductDto productDto = ProductDto.builder().sku(product.getSku()).name(product.getName()).build();
         String getExpiryDate = product.getExpiryDate().toString();
         productDto.setExpiryDate(getExpiryDate);
         String getProductionDate = product.getProductionDate().toString();
@@ -23,9 +21,7 @@ public class ProductMapper {
     }
 
     public static Product productDtoToEntity(ProductDto productDto) {
-        Product product = new Product();
-        product.setSku(productDto.getSku());
-        product.setName(productDto.getName());
+        Product product = Product.builder().sku(productDto.getSku()).name(productDto.getName()).build();
         if(productDto.getExpiryDate() != null){
             LocalDate getExpiryDate = LocalDate.parse(productDto.getExpiryDate(), DateTimeFormatter.ofPattern(DateFormatCons.YYYY_MM_DD_HYPHEN));
             product.setExpiryDate(getExpiryDate);

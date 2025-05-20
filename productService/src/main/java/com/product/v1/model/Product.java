@@ -3,9 +3,14 @@ package com.product.v1.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.product.v1.annotation.NotMissing;
 import com.product.v1.constant.DateFormatCons;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
-import lombok.Data;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.PastOrPresent;
+import lombok.*;
+import org.hibernate.annotations.BatchSize;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -13,6 +18,10 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "products")
 @Data
+@Builder
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
+@NoArgsConstructor
+@BatchSize(size = 100)
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;

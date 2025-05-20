@@ -5,9 +5,14 @@ import com.product.v1.annotation.NotContainsSpace;
 import com.product.v1.annotation.NotMissing;
 import com.product.v1.constant.DateFormatCons;
 import jakarta.validation.constraints.Size;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
+@AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class ProductDto {
 
     @Size(min = 7, max = 7, message = "SKU must equals to 7 characters")
