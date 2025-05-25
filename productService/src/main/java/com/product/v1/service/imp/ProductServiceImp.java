@@ -6,19 +6,16 @@ import com.product.v1.exception.ResourceNotFoundException;
 import com.product.v1.model.Product;
 import com.product.v1.repository.ProductRepository;
 import com.product.v1.service.ProductService;
+import com.product.v1.utils.ExcelFileManagement;
 import lombok.AllArgsConstructor;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +24,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+@Slf4j
 @Service
 @AllArgsConstructor
 public class ProductServiceImp implements ProductService {
@@ -43,30 +41,16 @@ public class ProductServiceImp implements ProductService {
 
     @Transactional
     @Override
-    public void importProducts(final MultipartFile file) throws IOException {
-        Workbook workbook = new XSSFWorkbook(file.getInputStream());
-        Sheet sheet = workbook.getSheetAt(0);
-        int lastRow = sheet.getLastRowNum();
-        List<Product> products = new ArrayList<>();
-        for (int i = 1; i < lastRow; i++){
-            Row row = sheet.getRow(i);
-            String sku = String.valueOf((int) row.getCell(0).getNumericCellValue()) ;
-            Cell nameProduct = row.getCell(1);
-            Product product = Product.builder().sku(sku).name(nameProduct.getStringCellValue()).build();
-            products.add(product);
-        }
+    public void importProducts(final MultipartFile file){
+        List<Product> productList = ExcelFileManagement.readExcelFile(file);
         // Define the thread pool and submit tasks
         ExecutorService executorService = Executors.newFixedThreadPool(10); // 10 threads, adjust based on your system
-        List<List<Product>> partitionedProducts = partitionList(products, 500); // Partition into smaller batches (100 products per batch)
+        List<List<Product>> partitionedProducts = ExcelFileManagement.partitionList(productList, 500); // Partition into smaller batches (100 products per batch)
         List<Future<?>> futures = new ArrayList<>();
         // Submit save tasks to executor service
         for (List<Product> productBatch : partitionedProducts) {
             futures.add(executorService.submit(() -> {
-                try {
-                    productRepository.saveAll(productBatch);
-                } catch (Exception e) {
-                    e.printStackTrace(); // Log the error, consider handling it gracefully
-                }
+                productRepository.saveAll(productBatch);
             }));
         }
         // Wait for all tasks to complete
@@ -74,24 +58,19 @@ public class ProductServiceImp implements ProductService {
             try {
                 future.get(); // Will throw an exception if the task fails
             } catch (InterruptedException | ExecutionException e) {
-                e.printStackTrace();
+                log.debug(e.toString());
             }
         }
         // Shutdown the executor service
         executorService.shutdown();
     }
-    // Helper method to partition the list into smaller batches
-    private List<List<Product>> partitionList(List<Product> list, int batchSize) {
-        List<List<Product>> partitions = new ArrayList<>();
-        for (int i = 0; i < list.size(); i += batchSize) {
-            partitions.add(list.subList(i, Math.min(i + batchSize, list.size())));
-        }
-        return partitions;
-    }
+
 
     @Override
-    public void exportProducts(){
-
+    public ByteArrayResource exportProducts(){
+        List<Product> list = productRepository.findAll();
+        byte[] fileBytes = ExcelFileManagement.exportExcelBytes(list);
+        return new ByteArrayResource(fileBytes);
     }
 
     @Override

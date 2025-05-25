@@ -4,22 +4,23 @@ import com.product.v1.dto.request.ProductDto;
 import com.product.v1.dto.request.UpdateRequestDto;
 import com.product.v1.dto.response.DeletedDto;
 import com.product.v1.dto.response.UpdateResponseDto;
-import com.product.v1.model.Product;
 import com.product.v1.mapper.ProductMapper;
+import com.product.v1.model.Product;
 import com.product.v1.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.io.IOException;
 
 @RestController
 @RequestMapping(path = "/api/v1/products", produces = {MediaType.APPLICATION_JSON_VALUE})
@@ -45,15 +46,18 @@ public class ProductController {
     }
 
     @PostMapping(value = "/import", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    public ResponseEntity<?> importProdcts(@RequestPart final MultipartFile file) throws IOException {
+    public ResponseEntity<?> importProdcts(@RequestPart final MultipartFile file){
         productService.importProducts(file);
         return ResponseEntity.status(HttpStatus.OK).build();
     }
 
-    @PostMapping(value = "/export", produces = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    public ResponseEntity<?> exportProduct() {
-//        productService.exportProducts("");
-        return ResponseEntity.status(HttpStatus.OK).build();
+    @GetMapping("/export")
+    public ResponseEntity<Resource> exportProducts() {
+        ByteArrayResource resource = productService.exportProducts();
+        return ResponseEntity.ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=products_info.xlsx")
+                .contentType(MediaType.parseMediaType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"))
+                .body(resource);
     }
 
     @GetMapping("/sku/{sku}")
