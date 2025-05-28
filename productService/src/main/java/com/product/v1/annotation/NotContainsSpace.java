@@ -15,7 +15,7 @@ import static java.lang.annotation.ElementType.FIELD;
 @Constraint(validatedBy = NotContainsSpaceValidator.class)
 public @interface NotContainsSpace {
 
-    String message() default "Field must not contains BLANK spaces";
+    String message() default "Field must not contains spaces";
 
     Class<?>[] groups() default {};
 

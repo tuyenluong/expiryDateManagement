@@ -32,8 +32,7 @@ public class ProductController {
     @GetMapping()
     public ResponseEntity<Page<ProductDto>> getProducts(
             @PageableDefault(size = 10, page = 0, sort = "name",
-                    direction = Sort.Direction.ASC)
-            Pageable pageable) {
+                    direction = Sort.Direction.ASC) Pageable pageable) {
         Page<Product> products = productService.getAllProducts(pageable);
         Page<ProductDto> productDtos = products.map(ProductMapper::productToDto);
         return ResponseEntity.status(HttpStatus.OK).body(productDtos);
@@ -43,6 +42,28 @@ public class ProductController {
     public ResponseEntity<ProductDto> createProdct(@RequestBody @Valid ProductDto productDto) {
         productService.createProduct(ProductMapper.productDtoToEntity(productDto));
         return ResponseEntity.status(HttpStatus.OK).body(productDto);
+    }
+
+    @GetMapping("/sku/{sku}")
+    public ResponseEntity<ProductDto> getProductBySku(@PathVariable(name = "sku") String sku) {
+        ProductDto productDto = ProductMapper.productToDto(productService.getProductBySKU(sku));
+        return ResponseEntity.status(HttpStatus.OK).body(productDto);
+    }
+
+    @PatchMapping("/updateDate/{sku}")
+    public ResponseEntity<UpdateResponseDto> updateDate(@PathVariable(name = "sku") String sku,
+                                                        @RequestBody @Valid UpdateRequestDto updateRequestDto) {
+        Integer affectedRows = productService.updateDateBySku(sku,updateRequestDto);
+        UpdateResponseDto updateResponseDto = ProductMapper.productToUpdateResponseDto(productService.getProductBySKU(sku), affectedRows);
+        return ResponseEntity.status(HttpStatus.OK).body(updateResponseDto);
+    }
+
+    @DeleteMapping("/delete/{sku}")
+    public ResponseEntity<DeletedDto> deleteProduct(@PathVariable(name = "sku") String sku) {
+        Product product = productService.getProductBySKU(sku);
+        Integer affectedRows = productService.deleteProductBySku(sku);
+        DeletedDto deletedDto = ProductMapper.productToDeleteDto(product,affectedRows);
+        return ResponseEntity.status(HttpStatus.OK).body(deletedDto);
     }
 
     @PostMapping(value = "/import", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
@@ -60,28 +81,14 @@ public class ProductController {
                 .body(resource);
     }
 
-    @GetMapping("/sku/{sku}")
-    public ResponseEntity<ProductDto> getProductBySku(@PathVariable(name = "sku") String sku) {
-        ProductDto productDto = ProductMapper.productToDto(productService.getProductBySKU(sku));
-        return ResponseEntity.status(HttpStatus.OK).body(productDto);
+    @GetMapping("/offShelfDate")
+    public ResponseEntity<?> getOffShelfDateProducts() {
+        return ResponseEntity.ok().build();
     }
 
-    @PatchMapping("/updateDate/{sku}")
-    public ResponseEntity<UpdateResponseDto> updateDate(@PathVariable(name = "sku") String sku,
-                                                        @RequestBody @Valid UpdateRequestDto updateRequestDto) {
-
-        Integer affectedRows = productService.updateDateBySku(sku,updateRequestDto);
-        UpdateResponseDto updateResponseDto = ProductMapper.productToUpdateResponseDto(productService.getProductBySKU(sku), affectedRows);
-        return ResponseEntity.status(HttpStatus.OK).body(updateResponseDto);
+    @GetMapping("/expiryDate")
+    public ResponseEntity<?> getExpiryDateProducts() {
+        return ResponseEntity.ok().build();
     }
-
-    @DeleteMapping("/delete/{sku}")
-    public ResponseEntity<DeletedDto> deleteProduct(@PathVariable(name = "sku") String sku) {
-        Product product = productService.getProductBySKU(sku);
-        Integer affectedRows = productService.deleteProductBySku(sku);
-        DeletedDto deletedDto = ProductMapper.productToDeleteDto(product,affectedRows);
-        return ResponseEntity.status(HttpStatus.OK).body(deletedDto);
-    }
-
 
 }
