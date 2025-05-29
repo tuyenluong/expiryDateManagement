@@ -1,0 +1,90 @@
+version: '3.9'
+
+services:
+  eureka:
+    build: ./gateway
+    container_name: eureka
+    ports:
+      - "8761:8761"
+    environment:
+      - SPRING_APPLICATION_NAME=eureka
+      - SERVER_PORT=8761
+      - EUREKA_CLIENT_REGISTER_WITH_EUREKA=false
+      - EUREKA_CLIENT_FETCH_REGISTRY=false
+      - EUREKA_INSTANCE_HOSTNAME=eureka
+    networks:
+      - edm-network
+
+  product-service:
+    build: ./productService
+    container_name: product-service
+    restart: on-failure
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_ENV=dev
+      - SPRING_APPLICATION_NAME=product-service
+      - SERVER_PORT=8081
+      - SPRING_CLOUD_COMPATIBILITY_VERIFIER=false
+      - EUREKA_CLIENT_REGISTER_WITH_EUREKA=true
+      - EUREKA_CLIENT_FETCH_REGISTRY=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka
+    depends_on:
+      - eureka
+    networks:
+      - edm-network
+
+  warehouse-service:
+    build: ./warehouseService
+    container_name: warehouse-service
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_APPLICATION_NAME=warehouse-service
+      - SERVER_PORT=8083
+      - SPRING_CLOUD_COMPATIBILITY_VERIFIER=false
+      - EUREKA_CLIENT_REGISTER_WITH_EUREKA=true
+      - EUREKA_CLIENT_FETCH_REGISTRY=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka
+    depends_on:
+      - eureka
+    networks:
+      - edm-network
+
+  file-service:
+    build: ./fileService
+    container_name: file-service
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_APPLICATION_NAME=file-service
+      - SERVER_PORT=8082
+      - SPRING_CLOUD_COMPATIBILITY_VERIFIER=false
+      - EUREKA_CLIENT_REGISTER_WITH_EUREKA=true
+      - EUREKA_CLIENT_FETCH_REGISTRY=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka
+    depends_on:
+      - eureka
+    networks:
+      - edm-network
+
+  user-service:
+    build: ./userService
+    container_name: user-service
+    ports:
+      - "8084:8084"
+    environment:
+      - SPRING_APPLICATION_NAME=user-service
+      - SERVER_PORT=8084
+      - SPRING_CLOUD_COMPATIBILITY_VERIFIER=false
+      - EUREKA_CLIENT_REGISTER_WITH_EUREKA=true
+      - EUREKA_CLIENT_FETCH_REGISTRY=true
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:8761/eureka
+    depends_on:
+      - eureka
+    networks:
+      - edm-network
+
+networks:
+  edm-network:
+    driver: bridge
