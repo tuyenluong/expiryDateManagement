@@ -22,7 +22,6 @@ services:
     ports:
       - "8081:8081"
     environment:
-      - SPRING_ENV=dev
       - SPRING_APPLICATION_NAME=product-service
       - SERVER_PORT=8081
       - SPRING_CLOUD_COMPATIBILITY_VERIFIER=false
