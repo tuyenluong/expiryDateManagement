@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -31,9 +32,9 @@ public class User {
     private String email;
 
     // Relationships
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinColumn(name = "role_id", nullable = false)
-    private Roles role;
+    private Set<Roles> roles;
 
     // Optional for tracking
     private LocalDateTime createdAt;
