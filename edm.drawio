@@ -10,16 +10,16 @@
         <mxCell id="0Fknj3TEt2xJ0s67hb96-6" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="150" y="380" width="280" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="0Fknj3TEt2xJ0s67hb96-0" value="Product service" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="0Fknj3TEt2xJ0s67hb96-6">
+        <mxCell id="0Fknj3TEt2xJ0s67hb96-0" value="Products" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="0Fknj3TEt2xJ0s67hb96-6">
           <mxGeometry width="130" height="68.57" as="geometry" />
         </mxCell>
         <mxCell id="0Fknj3TEt2xJ0s67hb96-2" value="Authentication" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="0Fknj3TEt2xJ0s67hb96-6">
           <mxGeometry y="91.43" width="130" height="68.57" as="geometry" />
         </mxCell>
-        <mxCell id="0Fknj3TEt2xJ0s67hb96-3" value="Facility" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="0Fknj3TEt2xJ0s67hb96-6">
+        <mxCell id="0Fknj3TEt2xJ0s67hb96-3" value="Facilities" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="0Fknj3TEt2xJ0s67hb96-6">
           <mxGeometry x="160" width="120" height="68.57142857142858" as="geometry" />
         </mxCell>
-        <mxCell id="0Fknj3TEt2xJ0s67hb96-5" value="Documentation" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="0Fknj3TEt2xJ0s67hb96-6">
+        <mxCell id="0Fknj3TEt2xJ0s67hb96-5" value="Documentations" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="0Fknj3TEt2xJ0s67hb96-6">
           <mxGeometry x="160" y="91.42857142857143" width="120" height="68.57142857142858" as="geometry" />
         </mxCell>
         <mxCell id="0Fknj3TEt2xJ0s67hb96-11" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
