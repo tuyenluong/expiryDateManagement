@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="tR5almWe5Myq34XKkEHq-3" value="Create product" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-560" y="80" width="120" height="60" as="geometry" />
+          <mxGeometry x="-584" y="80" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tR5almWe5Myq34XKkEHq-4" value="Product" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-810" y="10" width="160" height="150" as="geometry" />
@@ -33,19 +33,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="tR5almWe5Myq34XKkEHq-8" value="Did product have&lt;div&gt;&lt;b&gt;expiryDate &lt;/b&gt;and&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;b&gt;productionDate?&lt;/b&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-580" y="240" width="160" height="120" as="geometry" />
+          <mxGeometry x="-604" y="190" width="160" height="120" as="geometry" />
         </mxCell>
         <mxCell id="tR5almWe5Myq34XKkEHq-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tR5almWe5Myq34XKkEHq-3" target="tR5almWe5Myq34XKkEHq-8">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="tR5almWe5Myq34XKkEHq-10" value="Proceed with &lt;b&gt;dateChecker &lt;/b&gt;service" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-565" y="500" width="130" height="70" as="geometry" />
+          <mxGeometry x="-589" y="375" width="130" height="70" as="geometry" />
         </mxCell>
         <mxCell id="tR5almWe5Myq34XKkEHq-13" value="Stay still until product&amp;nbsp;&lt;div&gt;have&amp;nbsp;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;expiryDate&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;and&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;productionDate&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-320" y="265" width="150" height="70" as="geometry" />
+          <mxGeometry x="-374" y="215" width="150" height="70" as="geometry" />
         </mxCell>
         <mxCell id="tR5almWe5Myq34XKkEHq-19" value="Date Checker" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-800" y="435" width="160" height="150" as="geometry" />
+          <mxGeometry x="-800" y="310" width="160" height="150" as="geometry" />
         </mxCell>
         <mxCell id="tR5almWe5Myq34XKkEHq-20" value="&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;sku&lt;/span&gt;&lt;/li&gt;&lt;li&gt;department&lt;/li&gt;&lt;li&gt;onShelfDay&lt;/li&gt;&lt;ul&gt;&lt;li&gt;percentages&lt;/li&gt;&lt;li&gt;days&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" vertex="1" parent="tR5almWe5Myq34XKkEHq-19">
           <mxGeometry y="50" width="160" height="100" as="geometry" />
