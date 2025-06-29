@@ -137,7 +137,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aCcGvJMV7gOWUmrDXMNN-33" value="This service could&lt;div&gt;be schudule base&lt;/div&gt;&lt;div&gt;or oncePerRequest base&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.roundRectCallout;dx=30;dy=15;size=5;boundedLbl=1;" vertex="1" parent="1">
+        <mxCell id="aCcGvJMV7gOWUmrDXMNN-33" value="This service could&lt;div&gt;be schudule base&lt;/div&gt;&lt;div&gt;or oncePerRequest base or could be both&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.roundRectCallout;dx=30;dy=15;size=5;boundedLbl=1;" vertex="1" parent="1">
           <mxGeometry x="-480" y="320" width="130" height="85" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-35" value="This color is a action/ verb process" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
