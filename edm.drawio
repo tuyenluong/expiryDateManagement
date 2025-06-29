@@ -108,7 +108,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aCcGvJMV7gOWUmrDXMNN-12" value="Decrease countdown&amp;nbsp;&lt;div&gt;till expiry date by 1&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+        <mxCell id="aCcGvJMV7gOWUmrDXMNN-12" value="Decrease countdown&amp;nbsp;&lt;div&gt;expiry date by 1&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-210" y="910" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-15" value="Example:&lt;div&gt;&lt;ul&gt;&lt;li&gt;Today: 20 day till expiry date&lt;/li&gt;&lt;li&gt;Yesterday: 21 day till expiry date&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
@@ -153,7 +153,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Architecture diagram">
-    <mxGraphModel dx="2593" dy="1365" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1501" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
