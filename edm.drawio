@@ -4,10 +4,10 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="tR5almWe5Myq34XKkEHq-3" value="Create product" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="tR5almWe5Myq34XKkEHq-3" value="Create product" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="-584" y="80" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="tR5almWe5Myq34XKkEHq-4" value="Product" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="tR5almWe5Myq34XKkEHq-4" value="Product" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
           <mxGeometry x="-810" width="160" height="170" as="geometry" />
         </mxCell>
         <mxCell id="tR5almWe5Myq34XKkEHq-5" value="&lt;ul&gt;&lt;li&gt;sku&lt;/li&gt;&lt;li&gt;productName&lt;/li&gt;&lt;li&gt;department&lt;/li&gt;&lt;li&gt;batchId&lt;/li&gt;&lt;li&gt;expiryDate&lt;/li&gt;&lt;li&gt;productionDate&lt;/li&gt;&lt;/ul&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="tR5almWe5Myq34XKkEHq-4" vertex="1">
@@ -32,19 +32,19 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tR5almWe5Myq34XKkEHq-8" value="Did product have&lt;div&gt;&lt;b&gt;expiryDate &lt;/b&gt;and&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;b&gt;productionDate?&lt;/b&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="tR5almWe5Myq34XKkEHq-8" value="Did product have&lt;div&gt;&lt;b&gt;expiryDate &lt;/b&gt;and&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;b&gt;productionDate?&lt;/b&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="-604" y="190" width="160" height="120" as="geometry" />
         </mxCell>
         <mxCell id="tR5almWe5Myq34XKkEHq-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="tR5almWe5Myq34XKkEHq-3" target="tR5almWe5Myq34XKkEHq-8" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tR5almWe5Myq34XKkEHq-10" value="Proceed with &lt;b&gt;dateChecker &lt;/b&gt;service" style="whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+        <mxCell id="tR5almWe5Myq34XKkEHq-10" value="Proceed with &lt;b&gt;dateChecker &lt;/b&gt;service" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="-589" y="375" width="130" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tR5almWe5Myq34XKkEHq-13" value="Stay still until product&amp;nbsp;&lt;div&gt;have&amp;nbsp;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;expiryDate&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;and&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;productionDate&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
+        <mxCell id="tR5almWe5Myq34XKkEHq-13" value="Stay still until product&amp;nbsp;&lt;div&gt;have&amp;nbsp;&lt;b style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;expiryDate&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;and&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;productionDate&lt;/b&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="-810" y="215" width="150" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="tR5almWe5Myq34XKkEHq-19" value="Date Checker" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="tR5almWe5Myq34XKkEHq-19" value="Date Checker" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
           <mxGeometry x="-800" y="310" width="160" height="150" as="geometry" />
         </mxCell>
         <mxCell id="tR5almWe5Myq34XKkEHq-20" value="&lt;ul&gt;&lt;li&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;department&lt;/span&gt;&lt;/li&gt;&lt;li&gt;onShelfDay&lt;/li&gt;&lt;ul&gt;&lt;li&gt;percentages&lt;/li&gt;&lt;li&gt;days&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="tR5almWe5Myq34XKkEHq-19" vertex="1">
@@ -71,7 +71,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X1fi1oBa0P54eddxTUN2-1" value="Did product reach&amp;nbsp;&lt;div&gt;threshhold&lt;div&gt;&lt;b&gt;expiryDate&lt;/b&gt; yet?&lt;/div&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxCell id="X1fi1oBa0P54eddxTUN2-1" value="Did product reach&amp;nbsp;&lt;div&gt;threshhold&lt;div&gt;&lt;b&gt;expiryDate&lt;/b&gt; yet?&lt;/div&gt;&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="-604" y="525" width="160" height="120" as="geometry" />
         </mxCell>
         <mxCell id="X1fi1oBa0P54eddxTUN2-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="tR5almWe5Myq34XKkEHq-10" target="X1fi1oBa0P54eddxTUN2-1" edge="1">
@@ -80,7 +80,7 @@
         <mxCell id="X1fi1oBa0P54eddxTUN2-5" value="Do nothing" style="whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
           <mxGeometry x="-830" y="550" width="150" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="aCcGvJMV7gOWUmrDXMNN-4" value="Push Notification" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="aCcGvJMV7gOWUmrDXMNN-4" value="Push Notification" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-840" y="755" width="150" height="70" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="aCcGvJMV7gOWUmrDXMNN-6" target="aCcGvJMV7gOWUmrDXMNN-19">
@@ -91,13 +91,13 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aCcGvJMV7gOWUmrDXMNN-6" value="Handle yet?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="aCcGvJMV7gOWUmrDXMNN-6" value="Handle yet?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="-238" y="730" width="160" height="120" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="aCcGvJMV7gOWUmrDXMNN-9" target="aCcGvJMV7gOWUmrDXMNN-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="aCcGvJMV7gOWUmrDXMNN-9" value="Product not suitable" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="aCcGvJMV7gOWUmrDXMNN-9" value="Product not suitable" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="-599" y="755" width="150" height="70" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aCcGvJMV7gOWUmrDXMNN-12" target="aCcGvJMV7gOWUmrDXMNN-15">
@@ -108,7 +108,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aCcGvJMV7gOWUmrDXMNN-12" value="Decrease countdown&amp;nbsp;&lt;div&gt;till expiry date by 1&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="aCcGvJMV7gOWUmrDXMNN-12" value="Decrease countdown&amp;nbsp;&lt;div&gt;till expiry date by 1&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-210" y="950" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-15" value="Example:&lt;div&gt;&lt;ul&gt;&lt;li&gt;Today: 20 day till expiry date&lt;/li&gt;&lt;li&gt;Yesterday: 21 day till expiry date&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
@@ -117,10 +117,10 @@
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aCcGvJMV7gOWUmrDXMNN-19" target="aCcGvJMV7gOWUmrDXMNN-24">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="aCcGvJMV7gOWUmrDXMNN-19" value="Delete &lt;b&gt;expiryDate&lt;/b&gt;, &lt;b&gt;productionDate&lt;/b&gt;, &lt;b&gt;batchId&lt;/b&gt; of the product" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="aCcGvJMV7gOWUmrDXMNN-19" value="Delete &lt;b&gt;expiryDate&lt;/b&gt;, &lt;b&gt;productionDate&lt;/b&gt;, &lt;b&gt;batchId&lt;/b&gt; of the product" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-290" y="400" width="264" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="aCcGvJMV7gOWUmrDXMNN-24" value="Input new&amp;nbsp;&lt;b&gt;expiryDate&lt;/b&gt;,&amp;nbsp;&lt;b&gt;productionDate&lt;/b&gt;,&amp;nbsp;&lt;b&gt;batchId&lt;/b&gt;&amp;nbsp;of the product" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
+        <mxCell id="aCcGvJMV7gOWUmrDXMNN-24" value="Input new&amp;nbsp;&lt;b&gt;expiryDate&lt;/b&gt;,&amp;nbsp;&lt;b&gt;productionDate&lt;/b&gt;,&amp;nbsp;&lt;b&gt;batchId&lt;/b&gt;&amp;nbsp;of the product" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="-303" y="220" width="290" height="60" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="aCcGvJMV7gOWUmrDXMNN-24" target="tR5almWe5Myq34XKkEHq-8">
@@ -136,6 +136,18 @@
           <mxGeometry x="0.0387" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="aCcGvJMV7gOWUmrDXMNN-33" value="This service could&lt;div&gt;be schudule base&lt;/div&gt;&lt;div&gt;or oncePerRequest base&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.roundRectCallout;dx=30;dy=15;size=5;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="-480" y="320" width="130" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="aCcGvJMV7gOWUmrDXMNN-35" value="This color is a action/ verb process" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="-660" y="-140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aCcGvJMV7gOWUmrDXMNN-36" value="This color is a logic decision process" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-510" y="-140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aCcGvJMV7gOWUmrDXMNN-37" value="This color is a state/status of a product" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-370" y="-140" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
