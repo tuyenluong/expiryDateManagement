@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.6" pages="2">
   <diagram id="D3gnG_-lmSFRu7kB0V8u" name="Business Flow">
-    <mxGraphModel dx="3080" dy="1920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2610" dy="939" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,7 +8,7 @@
           <mxGeometry x="-584" y="80" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tR5almWe5Myq34XKkEHq-4" value="Product" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
-          <mxGeometry x="-810" width="160" height="170" as="geometry" />
+          <mxGeometry x="-810" y="10" width="160" height="170" as="geometry" />
         </mxCell>
         <mxCell id="tR5almWe5Myq34XKkEHq-5" value="&lt;ul&gt;&lt;li&gt;sku&lt;/li&gt;&lt;li&gt;productName&lt;/li&gt;&lt;li&gt;department&lt;/li&gt;&lt;li&gt;batchId&lt;/li&gt;&lt;li&gt;expiryDate&lt;/li&gt;&lt;li&gt;productionDate&lt;/li&gt;&lt;/ul&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="tR5almWe5Myq34XKkEHq-4" vertex="1">
           <mxGeometry y="50" width="160" height="120" as="geometry" />
@@ -78,10 +78,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="X1fi1oBa0P54eddxTUN2-5" value="Do nothing" style="whiteSpace=wrap;html=1;strokeWidth=2;" parent="1" vertex="1">
-          <mxGeometry x="-830" y="550" width="150" height="70" as="geometry" />
+          <mxGeometry x="-820" y="550" width="150" height="70" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-4" value="Push Notification" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-840" y="755" width="150" height="70" as="geometry" />
+          <mxGeometry x="-820" y="755" width="150" height="70" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="aCcGvJMV7gOWUmrDXMNN-6" target="aCcGvJMV7gOWUmrDXMNN-19">
           <mxGeometry relative="1" as="geometry" />
@@ -109,10 +109,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-12" value="Decrease countdown&amp;nbsp;&lt;div&gt;till expiry date by 1&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-210" y="950" width="120" height="60" as="geometry" />
+          <mxGeometry x="-210" y="910" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-15" value="Example:&lt;div&gt;&lt;ul&gt;&lt;li&gt;Today: 20 day till expiry date&lt;/li&gt;&lt;li&gt;Yesterday: 21 day till expiry date&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="-280" y="1069" width="260" height="90" as="geometry" />
+          <mxGeometry x="-620" y="895" width="260" height="90" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aCcGvJMV7gOWUmrDXMNN-19" target="aCcGvJMV7gOWUmrDXMNN-24">
           <mxGeometry relative="1" as="geometry" />
@@ -141,13 +141,13 @@
           <mxGeometry x="-480" y="320" width="130" height="85" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-35" value="This color is a action/ verb process" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-660" y="-140" width="120" height="60" as="geometry" />
+          <mxGeometry x="-413" y="10" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-36" value="This color is a logic decision process" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="-510" y="-140" width="120" height="60" as="geometry" />
+          <mxGeometry x="-263" y="10" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="aCcGvJMV7gOWUmrDXMNN-37" value="This color is a state/status of a product" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-370" y="-140" width="120" height="60" as="geometry" />
+          <mxGeometry x="-123" y="10" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
