@@ -153,15 +153,15 @@
     </mxGraphModel>
   </diagram>
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Architecture diagram">
-    <mxGraphModel dx="2084" dy="1054" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1737" dy="878" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="AnJYIpU-UxVcZdIobVPg-12" value="https://www.youtube.com/watch?v=mYa4c-VyGS4&amp;amp;t=290s" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="214" y="64.53000000000003" width="200" height="120.37" as="geometry" />
+          <mxGeometry x="30" y="320" width="200" height="120.37" as="geometry" />
         </mxCell>
         <mxCell id="jJDqSjh1FV2xPbrHsVmp-0" value="https://chatgpt.com/share/68594b6f-1710-8000-ba8e-dedbd112922e" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="480" y="209.05" width="200" height="120.37" as="geometry" />
+          <mxGeometry x="30" y="500" width="200" height="120.37" as="geometry" />
         </mxCell>
         <mxCell id="TlXD2P5qQ5aThupilqv0-6" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1140" y="70" width="280" height="109.42" as="geometry" />
@@ -233,7 +233,7 @@
           <mxGeometry x="230" y="20.180000000000064" width="175.35" height="109.63" as="geometry" />
         </mxCell>
         <mxCell id="TlXD2P5qQ5aThupilqv0-28" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="790" y="70" width="280" height="109.42" as="geometry" />
+          <mxGeometry x="680" y="130" width="280" height="109.42" as="geometry" />
         </mxCell>
         <mxCell id="TlXD2P5qQ5aThupilqv0-29" value="Date Checker" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="TlXD2P5qQ5aThupilqv0-28">
           <mxGeometry width="280" height="109.42" as="geometry" />
@@ -242,7 +242,7 @@
           <mxGeometry x="10" y="4.640000000000001" width="54.96" height="55.36" as="geometry" />
         </mxCell>
         <mxCell id="TlXD2P5qQ5aThupilqv0-32" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="450" y="70" width="280" height="109.42" as="geometry" />
+          <mxGeometry x="350" y="290" width="280" height="109.42" as="geometry" />
         </mxCell>
         <mxCell id="TlXD2P5qQ5aThupilqv0-33" value="Notification" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="TlXD2P5qQ5aThupilqv0-32">
           <mxGeometry width="280" height="109.42" as="geometry" />
