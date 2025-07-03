@@ -153,7 +153,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Architecture diagram">
-    <mxGraphModel dx="4487" dy="2675" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4030" dy="2487" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -298,7 +298,7 @@
         <mxCell id="FrPX4RZUDKNDrvCkwNNJ-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.002;entryY=0.716;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0Fknj3TEt2xJ0s67hb96-4" target="Jg6xwz5g0kOmOTh1q88x-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="FrPX4RZUDKNDrvCkwNNJ-4" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;For service inter-communication&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FrPX4RZUDKNDrvCkwNNJ-2">
+        <mxCell id="FrPX4RZUDKNDrvCkwNNJ-4" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;For services inter-communication&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="FrPX4RZUDKNDrvCkwNNJ-2">
           <mxGeometry x="-0.1109" y="6" relative="1" as="geometry">
             <mxPoint x="1" as="offset" />
           </mxGeometry>
