@@ -153,12 +153,12 @@
     </mxGraphModel>
   </diagram>
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Architecture diagram">
-    <mxGraphModel dx="4995" dy="3277" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4487" dy="2675" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="TlXD2P5qQ5aThupilqv0-24" value="" style="group" vertex="1" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1330" y="1090" width="470" height="150" as="geometry" />
+          <mxGeometry x="1200" y="990" width="470" height="150" as="geometry" />
         </mxCell>
         <mxCell id="0Fknj3TEt2xJ0s67hb96-4" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Eureka Server&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="TlXD2P5qQ5aThupilqv0-24" vertex="1">
           <mxGeometry y="10" width="470" height="150" as="geometry" />
@@ -176,7 +176,7 @@
           <mxGeometry x="30" y="10" width="96.1" height="80.58" as="geometry" />
         </mxCell>
         <mxCell id="Jg6xwz5g0kOmOTh1q88x-4" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="530" y="-80" width="2010" height="940" as="geometry" />
+          <mxGeometry x="530" y="-80" width="1750" height="940" as="geometry" />
         </mxCell>
         <mxCell id="5o2kE3tWHmJVRHoO7-vi-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Jg6xwz5g0kOmOTh1q88x-7" target="TlXD2P5qQ5aThupilqv0-29">
           <mxGeometry relative="1" as="geometry" />
