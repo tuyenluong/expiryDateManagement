@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.1.6" pages="2">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.2.0" pages="2">
   <diagram id="D3gnG_-lmSFRu7kB0V8u" name="Business Flow">
     <mxGraphModel dx="1869" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -153,7 +153,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Architecture diagram">
-    <mxGraphModel dx="4990" dy="3047" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4157" dy="2671" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -167,7 +167,7 @@
           <mxGeometry x="230" y="20.180000000000064" width="175.35" height="109.63" as="geometry" />
         </mxCell>
         <mxCell id="Jg6xwz5g0kOmOTh1q88x-9" value="" style="group" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1" connectable="0">
-          <mxGeometry x="-290" y="-730" width="400" height="210" as="geometry" />
+          <mxGeometry x="-240" y="-730" width="400" height="210" as="geometry" />
         </mxCell>
         <mxCell id="Jg6xwz5g0kOmOTh1q88x-7" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;API Gateway&lt;/font&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="Jg6xwz5g0kOmOTh1q88x-9" vertex="1">
           <mxGeometry y="-10" width="400" height="210" as="geometry" />
