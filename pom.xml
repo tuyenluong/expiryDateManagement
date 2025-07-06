@@ -21,11 +21,13 @@
 
     <modules>
         <module>productService</module>
-        <module>fileService</module>
-        <module>gateway</module>
-        <module>userService</module>
-        <module>warehouseService</module>
+        <module>documentationService</module>
+        <module>intercom</module>
+        <module>authenticationService</module>
+        <module>facilityService</module>
         <module>dateChecker</module>
+        <module>notificationService</module>
+        <module>batchService</module>
     </modules>
 
     <dependencyManagement>

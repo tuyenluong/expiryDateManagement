@@ -1,0 +1,39 @@
+POST http://localhost:8081/api/createProduct
+Content-Type: application/json
+{
+    "sku": "3301",
+    "name": "Nguyen Van A",
+    "expiryDate": "2025-12-31",
+    "productionDate": "2024-12-31"
+}
+
+curl -H 'Content-Type: application/json'
+      -d '{
+              "sku": "3301",
+              "name": "Nguyen Van A",
+              "expiryDate": "2025-12-31",
+              "productionDate": "2024-12-31"
+          }'
+      -X POST
+      http://localhost:8081/api/createProduct
+
+
+
+Invoke-WebRequest -Uri "http://localhost:8081/api/products/sku/3305" -Method GET -Headers @{ "Content-Type" = "application/json" }
+Invoke-WebRequest -Uri "http://localhost:8081/api/products/uuid/8769599f-0fce-4efc-98e5-0755d07c7351" -Method GET -Headers @{ "Content-Type" = "application/json" }
+Invoke-WebRequest -Uri "http://localhost:8081/api/products" -Method GET -Headers @{ "Content-Type" = "application/json" }
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3301", "name": "Nguyen Van A", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3302", "name": "Nguyen Van B", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3303", "name": "Nguyen Van C", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3304", "name": "Nguyen Van E", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3305", "name": "Nguyen Van F", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3306", "name": "Nguyen Van G", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3307", "name": "Nguyen Van H", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3308", "name": "Nguyen Van J", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3309", "name": "Nguyen Van K", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3310", "name": "Nguyen Van L", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3311", "name": "Nguyen Van Z", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3312", "name": "Nguyen Van X", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3313", "name": "Nguyen Van C", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3314", "name": "Nguyen Van V", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'
+Invoke-WebRequest -Uri "http://localhost:8081/api/createProduct" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"sku": "3315", "name": "Nguyen Van B", "expiryDate": "2025-12-31", "productionDate": "2024-12-31"}'

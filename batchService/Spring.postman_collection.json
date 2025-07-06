@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "94e2a273-144b-44cf-8c92-0a3ac914803a",
+		"name": "Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12899006"
+	},
+	"item": [
+		{
+			"name": "getAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tạo Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"sku\": \"3102121\",\r\n            \"name\": \"Nguyen Van B\",\r\n            \"expiryDate\": \"2025-12-31\",\r\n            \"productionDate\": \"2022-05-18\"\r\n            }\r\n        ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/products/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"create"
+					],
+					"query": [
+						{
+							"key": "expiryDate",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Xóa Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/products/delete/3301",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"delete",
+						"3301"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateDate",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"sku\": \"0234567\",\r\n      \"name\": \"Trà phúc long\",\r\n      \"expiryDate\": \"2025-12-31\",\r\n      \"productionDate\": \"2024-12-31\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/products/updateDate/3302",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						"updateDate",
+						"3302"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
