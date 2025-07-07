@@ -8,11 +8,11 @@
 		<version>1.0-SNAPSHOT</version>
 		<relativePath/><!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.file.service</groupId>
+	<groupId>com.documentation.service</groupId>
 	<artifactId>documentationService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>fileService</name>
-	<description>File service</description>
+	<name>documentation</name>
+	<description>Documentation service</description>
 	<url/>
 	<licenses>
 		<license/>

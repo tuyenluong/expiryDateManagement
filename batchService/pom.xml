@@ -8,11 +8,11 @@
 		<version>1.0-SNAPSHOT</version>
 		<relativePath/><!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.product.batch</groupId>
+	<groupId>com.batch.service</groupId>
 	<artifactId>batchesService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>batchesService</name>
-	<description>Batches Service</description>
+	<name>batch</name>
+	<description>Batch Service</description>
 	<url/>
 	<licenses>
 		<license/>

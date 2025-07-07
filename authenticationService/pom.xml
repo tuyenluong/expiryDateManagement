@@ -11,7 +11,7 @@
 	<groupId>com.authentication.service</groupId>
 	<artifactId>authenticationService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>authenticationService</name>
+	<name>authentication</name>
 	<description>Authentication Service</description>
 	<url/>
 	<licenses>

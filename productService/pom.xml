@@ -11,7 +11,7 @@
 	<groupId>com.product.service</groupId>
 	<artifactId>productService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>productService</name>
+	<name>product</name>
 	<description>Product service</description>
 	<url/>
 	<licenses>
