@@ -368,7 +368,7 @@
           <mxGeometry y="78" width="140" height="26" as="geometry" />
         </mxCell>
         <mxCell id="vandsSCsAndt2ocfa37Q-1" value="Authentication" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="330" y="284" width="140" height="104" as="geometry" />
+          <mxGeometry x="310" y="220" width="140" height="104" as="geometry" />
         </mxCell>
         <mxCell id="vandsSCsAndt2ocfa37Q-2" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="vandsSCsAndt2ocfa37Q-1" vertex="1">
           <mxGeometry y="26" width="140" height="26" as="geometry" />
