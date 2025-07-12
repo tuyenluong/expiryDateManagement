@@ -22,7 +22,7 @@ import java.time.LocalDate;
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 @NoArgsConstructor
 @BatchSize(size = 100)
-public class Product implements Serializable {
+public class Product extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

@@ -13,10 +13,6 @@ public interface ProductService {
 
     Product createProduct(Product product);
 
-    void importProducts(MultipartFile fileLocation);
-
-    ByteArrayResource exportProducts();
-
     Page<Product> getAllProducts(Pageable pageable);
 
     int updateDateBySku(String sku, UpdateRequestDto updateRequestDto);
@@ -25,4 +21,7 @@ public interface ProductService {
 
     Product getProductBySKU(String sku);
 
+    void importProducts(MultipartFile fileLocation);
+
+    ByteArrayResource exportProducts();
 }
